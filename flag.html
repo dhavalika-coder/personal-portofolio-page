@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-left: 150px;
+      }
+      section {
+        margin-left: 50px;
+        margin-top: 100px;
+        height: 300px;
+        width: 40%;
+        border: 2px solid black;
+        background-image: linear-gradient(rgb(255, 85, 0), white, green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: wave_motion;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      aside {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 5px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: rotatecircle;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      div {
+        position: absolute;
+      }
+
+      div {
+        height: 100px;
+        width: 0.5px;
+        background-color: blue;
+        border: 2px solid blue;
+      }
+      div:nth-child(1) {
+        transform: rotate(0deg);
+      }
+      div:nth-child(2) {
+        transform: rotate(15deg);
+      }
+      div:nth-child(3) {
+        transform: rotate(30deg);
+      }
+      div:nth-child(4) {
+        transform: rotate(45deg);
+      }
+      div:nth-child(5) {
+        transform: rotate(60deg);
+      }
+      div:nth-child(6) {
+        transform: rotate(75deg);
+      }
+      div:nth-child(7) {
+        transform: rotate(90deg);
+      }
+      div:nth-child(8) {
+        transform: rotate(105deg);
+      }
+      div:nth-child(9) {
+        transform: rotate(120deg);
+      }
+      div:nth-child(10) {
+        transform: rotate(135deg);
+      }
+      div:nth-child(11) {
+        transform: rotate(150deg);
+      }
+      div:nth-child(12) {
+        transform: rotate(165deg);
+      }
+      @keyframes rotatecircle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes wave_motion {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(3deg);
+          border-radius: 50px;
+        }
+        50% {
+          transform: rotate(-3deg);
+        }
+        75% {
+          transform: rotate(1.5deg);
+        }
+      }
+      article {
+        height: 100vh;
+        width: 20px;
+        background-color: chocolate;
+        position: absolute;
+        top: 100px;
+      }
+      svg {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        left: 20px;
+        top: 20px;
+        animation-name: rotatecircle;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <aside>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </aside>
+    </section>
+    <article>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-slash-circle-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708z"
+        />
+      </svg>
+    </article>
+  </body>
+</html>
